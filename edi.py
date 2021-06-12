@@ -131,10 +131,10 @@ def main():
         edi = EDI(args.device)
 
         if args.d:
-            edi.dump()
+            edi.dump(0, 0x10000)
 
         elif args.df:
-            edi.dump_flash()
+            edi.dump_flash(0, 128*1024)
 
         elif args.addr:
             addr = int(args.addr, 0)
