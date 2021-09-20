@@ -123,8 +123,8 @@ def main():
         rw.add_argument('data', nargs='?',            help='XDATA data to be written')
         args = argp.parse_args()
 
-        if not (args.d or args.addr):
-            argp.error('Need either -d or addr')
+        if not (args.d or args.addr or args.df):
+            argp.error('Need either -d, -df or addr')
         if not args.device:
             argp.error('Ftdi device not specified')
 
